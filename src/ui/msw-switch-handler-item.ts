@@ -1,7 +1,7 @@
 import Cookies from "js-cookie";
 import { LitElement, css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { getGlobalMultiCaseHandlers } from "../browser";
+import { getGlobalMultipleCaseHandlers } from "../browser";
 import { makeKey } from "../utils";
 
 @customElement("msw-switch-handler-item")
@@ -36,7 +36,7 @@ export class MswSwitchHandlerItem extends LitElement {
   @property() key = "";
 
   get data() {
-    const handlers = getGlobalMultiCaseHandlers();
+    const handlers = getGlobalMultipleCaseHandlers();
     const targetHandler = handlers.find(
       (handler) => makeKey(handler.method, handler.url) === this.key
     );

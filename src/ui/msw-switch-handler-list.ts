@@ -1,7 +1,7 @@
 import { LitElement, css, html } from "lit";
 import { customElement } from "lit/decorators.js";
 import { repeat } from "lit/directives/repeat.js";
-import { getGlobalMultiCaseHandlers } from "../browser";
+import { getGlobalMultipleCaseHandlers } from "../browser";
 import { makeKey } from "../utils";
 
 import "./msw-switch-handler-item";
@@ -19,7 +19,7 @@ export class MswSwitchHandlerList extends LitElement {
   `;
 
   render() {
-    const handlers = getGlobalMultiCaseHandlers();
+    const handlers = getGlobalMultipleCaseHandlers();
 
     return html`<ul>
       ${repeat(
