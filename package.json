@@ -1,0 +1,42 @@
+{
+  "name": "msw-switch",
+  "version": "0.0.1",
+  "description": "switch msw handlers easily",
+  "type": "module",
+  "exports": {
+    ".": {
+      "module": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "browser": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && rollup --config rollup.config.js",
+    "build:watch": "npm run clean && rollup --config rollup.config.js --watch",
+    "clean": "rimraf dist"
+  },
+  "homepage": "https://github.com/inwalter99/msw-switch",
+  "author": "inwalter99",
+  "license": "ISC",
+  "dependencies": {
+    "js-cookie": "^3.0.1",
+    "lit": "^2.2.7",
+    "msw": "^0.39.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "@types/js-cookie": "^3.0.2",
+    "rimraf": "^3.0.2",
+    "rollup-plugin-polyfill-node": "^0.9.0"
+  }
+}
